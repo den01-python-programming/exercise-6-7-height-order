@@ -1,8 +1,12 @@
 import pytest
-from src.person import Person
-from src.room import Room
+import os
 
 def test_exercise():
+    os.chdir('src')
+
+    from person import Person
+    from room import Room
+
     room = Room()
 
     assert room.is_empty()
